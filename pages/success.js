@@ -54,15 +54,8 @@ const logoutApp = ()=>{
 */
 
 const goHome = ()=>{
-  return (
-    <div>
-      <Link href="/">
-        <Button color="primary">
-          <a>Order More</a>
-        </Button>
-      </Link>
-    </div>
-  )}
+    useRouter.push("/");
+  }
 
 
 	return (
