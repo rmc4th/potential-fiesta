@@ -49,7 +49,6 @@ let restId = searchQuery[0].id
     return (<Dishes restId={restaurantID}> </Dishes>)
   };
 if(searchQuery.length > 0){
-  console.log("restList> res.image.url> ", res.image.url);
   const restList = searchQuery.map((res) => (
     <Col xs="6" sm="4" key={res.id}>
       <Card style={{ margin: "0 0.5rem 20px 0.5rem" }}>
@@ -61,7 +60,7 @@ if(searchQuery.length > 0){
           }
         />
         <CardBody>
-          <CardText>{res.description}</CardText>
+          <CardText>{res.image.url}<br/>{res.description}</CardText>
         </CardBody>
         <div className="card-footer">
         
