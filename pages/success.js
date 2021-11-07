@@ -53,7 +53,8 @@ const logoutApp = ()=>{
   )}
 */
 
-const goHome = ()=>{
+function goHome() {
+    console.log("goHome> trying...");
     useRouter.push("/");
   }
 

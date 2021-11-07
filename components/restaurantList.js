@@ -43,6 +43,8 @@ let searchQuery = data.restaurants.filter((res) =>{
   })
 
 let restId = searchQuery[0].id
+let testUrl = searchQuery[0].image.url;
+console.log("rList.js> ", testUrl);
  
 // definet renderer for Dishes
   const renderDishes = (restaurantID) => {
