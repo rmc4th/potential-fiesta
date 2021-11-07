@@ -81,7 +81,7 @@ const goHome = ()=>{
           {console.log(`Router Path: ${router.asPath}`)}
         </CardBody>
         <CardFooter>Thank You For Your Order!</CardFooter>
-        <Button color="info" onClick={goHome()}>Let's Eat!</Button>
+        <Button color="info" onClick={goHome}>Let's Eat!</Button>
       </Card>
 
       <style jsx>{`
