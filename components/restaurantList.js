@@ -19,7 +19,7 @@ function RestaurantList(props){
   const[restaurantID, setRestaurantID] = useState("000000000000000000000000")
   const {cart } = useContext(AppContext);
   const [state, setState] = useState(cart)
-  const GET_RESTAURANTS = gql`
+/*  const GET_RESTAURANTS = gql`
     query {
       restaurants {
         id
@@ -29,7 +29,8 @@ function RestaurantList(props){
       }
     }
   `;
-/*  const GET_RESTAURANTS = gql`
+  */
+  const GET_RESTAURANTS = gql`
     query {
       restaurants {
         id
@@ -40,7 +41,7 @@ function RestaurantList(props){
         }
       }
     }
-  `;*/
+  `;
   const { loading, error, data } = useQuery(GET_RESTAURANTS)
   if (loading) return <p>Loading...</p>;
   if (error) {console.log (`restList.js> useQuery> error: ${error}`); return <p>ERROR</p>;}
