@@ -25,12 +25,22 @@ function RestaurantList(props){
         id
         name
         description
+        image 
+      }
+    }
+  `;
+/*  const GET_RESTAURANTS = gql`
+    query {
+      restaurants {
+        id
+        name
+        description
         image {
           url
         }
       }
     }
-  `;
+  `;*/
   const { loading, error, data } = useQuery(GET_RESTAURANTS)
   if (loading) return <p>Loading...</p>;
   if (error) {console.log (`restList.js> useQuery> error: ${error}`); return <p>ERROR</p>;}
@@ -61,7 +71,7 @@ if(searchQuery.length > 0){
           top={true}
           style={{ height: 200 }}
           src={
-            process.env.NEXT_PUBLIC_API_URL + res.image.url
+            process.env.NEXT_PUBLIC_API_URL + res.image
           }
         />
         <CardBody>
