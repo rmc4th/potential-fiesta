@@ -36,6 +36,9 @@ function RestaurantList(props){
   if (error) {console.log (`restList.js> useQuery> error: ${error}`); return <p>ERROR</p>;}
   if (!data) return <p>Not found</p>;
   console.log(`Query Data: ${data.restaurants}`)
+  console.log(`Query Data: ${data.restaurants[0].id}`)
+  console.log(`Query Data: ${data.restaurants[0].name}`)
+  console.log(`Query Data: ${data.restaurants[0].image}`)
 
 
 let searchQuery = data.restaurants.filter((res) =>{

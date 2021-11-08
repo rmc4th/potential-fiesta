@@ -55,7 +55,7 @@ const logoutApp = ()=>{
 
 function goHome() {
     console.log("goHome> trying...");
-    useRouter.push("/");
+    router.push("/");
   }
 
 
